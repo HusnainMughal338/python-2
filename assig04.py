@@ -50,8 +50,8 @@ result = volume_of_cylinder(10,12)
 print("The volume of a cylinder is",result)
 
 #print(Calculate the BMI by using height meters and weight in kilograms) 
-def BMI_calculate(hight:int, weight:int):
-    BMI = weight/hight**2
+def BMI_calculate(height:int, weight:int):
+    BMI = weight/height**2
     return BMI
 result = BMI_calculate(10,12)
 print("Body mass index is",result)
