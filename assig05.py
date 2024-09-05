@@ -2,15 +2,12 @@
 print("question no #1:Find even or odd numbers?\n")
 def find_even():
      while True:
-          try:
              num = int(input("Enter a number to find even or odd:"))
              if num % 2 == 0:
                print("The number is even.")
                break
              else:
                print("The number is odd.")
-          except ValueError:
-               print("invalied number. Please try valied number.")
                return num
 num = find_even()
 
@@ -20,19 +17,23 @@ print("\n||-----------------Question End------------------||\n")
 
 
 #wehether it is devisible by both 2 and 3
-print("question no #2:Find the number divider by both 2 and 3?\n")
+print("question no #2:Find the number divider by both 2 or 3?\n")
 def devied_number():
     while True:
-        try:
-          num = int(input("Enter a nnumber:"))
+          num = int(input("Enter a number:"))
           if num % 2 == 0 and num % 3 == 0:
-             print("This num is divisible by both 2 and 3")
+             print("The number is divisible by both 2 and 3.")
+             break
+          if num % 2 == 0:
+             print("This num is divisible by two.")
+             break
+          if num % 3 == 0:
+             print("The num is divisible by three.")
              break
           else:
-             print ("This num is not divisible by both 2 and 3")
-        except ValueError:
-             print("Invalid number. Please try again with valid number")
-             return num
+              print("This num is not divisible by both 2 and 3")
+              return num
+            
 num = devied_number()
 
 
@@ -82,6 +83,7 @@ def CalculateAge():
       print("Invalid input. Please enter a valid year.")
       
 age = CalculateAge()
+print(f"Your age is {age} years.")
 
 
 
@@ -91,7 +93,6 @@ print("\n||-----------------Question End------------------||\n")
 # write a program to check who is valid for voting.
 print("Question no #5:check who is valid for voting?\n")
 
-print(f"Your age is {age} years.")
 def vote_check():
     while True:
        ask = str(input("They have a nationaleity of pakistani: "))
@@ -110,7 +111,7 @@ print("\n||-----------------Question End------------------||\n")
 
 
 #write a program to check the age of thhe people are child,tenngar,adult and senior.
-print("question no #6: Find the age age adult child teenger or senior\n")
+print("question no #6: Find the age age adult child teenger or senior?\n")
 def ageDetermine():
     while True:
         from datetime import datetime
@@ -119,13 +120,13 @@ def ageDetermine():
         age = currentYear - birthYear
         print(f"Your Age is: {age}")
         if age <=12:
-           print("They are a child.")
+           print("He is a child.")
         if age >=13 and age <= 19:
-           print("They are a teenager.") 
+           print("He is a teenager.") 
         if age >=20 and age <=59:
-           print("They are an adult.")
+           print("He is an adult.")
         if age >=60:
-           print("They are a senior.")
+           print("He is a senior.")
         return age
 age = ageDetermine()
 
@@ -169,3 +170,19 @@ def month_name():
 
 
 result = month_name()
+
+
+
+print("\n||-----------------Question End------------------||\n")
+
+
+#write a program to find leap year
+print("Question no #8 : Check if the given year is a leap year or not?\n")
+def leap_year():
+    year = int(input("Enter a year: "))
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        print(f"{year} is a leap year.")
+    else:
+        print(f"{year} is not a leap year.")
+    return leap_year
+year = leap_year()
